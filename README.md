@@ -118,6 +118,7 @@ The response has the following JSON format:
 ### Example request for inserting values into a binary search tree
 This could be an example input where the task is to insert the values in the existing tree.
 In this example the student has correctly created a new node with the value 8 and placed it at the correct location.
+*In this example, the student submission is correct.*
 ```json
 {
      "existing_tree":{
@@ -125,7 +126,7 @@ In this example the student has correctly created a new node with the value 8 an
           "left":{
                 "value":5,
                 "left":{
-                     "value":6,
+                     "value":4,
                      "left":null,
                      "right":null
                 },
@@ -143,7 +144,7 @@ In this example the student has correctly created a new node with the value 8 an
           "left":{
                 "value":5,
                 "left":{
-                     "value":6,
+                     "value":4,
                      "left":null,
                      "right":null
                 },
@@ -164,6 +165,7 @@ In this example the student has correctly created a new node with the value 8 an
 
 ### Example request for constructing a binary search tree from values
 This could be an example input where the task is to create a binary search tree from scratch with the given input `values`.
+*In this example, the student submission is correct.*
 
 ```json
 {
@@ -191,7 +193,8 @@ This could be an example input where the task is to create a binary search tree 
 
 ### Example request for fixing a red-black tree
 This could be an example input where the task is fixing the provided red-black tree by restoring red-black properties and performing rebalancing.
-Since the job is to only fix the tree instead of adding or removing nodes, the `values` field is null.
+Since the job is to only fix the tree instead of adding or removing nodes, the `values` field is null. 
+*In this example, the student submission is incorrect.*
 ```json
 {
     "existing_tree": {
@@ -233,6 +236,7 @@ Since the job is to only fix the tree instead of adding or removing nodes, the `
 ### Example request for inserting values into a red-black tree
 This could be an example input where the task is to insert values into an already existing red-black tree.
 Note, that the student did not color the root black, violating a red-black tree property.
+*In this example, the student submission is incorrect.*
 ```json
 {
     "existing_tree": {
