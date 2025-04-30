@@ -35,22 +35,32 @@ class BinaryTreeNode:
     def get_left_child(self) -> Self | None:
         return self._left
 
-    def set_left_child(self, node: Self | None):
+    def _set_left_child(self, node: Self | None):
         if type(self) == type(node) or node is None:
             self._left = node
         else:
             raise TypeError(
                 f"Left child must be a {type(self).__name__} or None")
 
+    def set_left_child(self, node: Self | None):
+        self._set_left_child(node)
+        if type(self) == type(node):
+            node.set_parent(self)
+
     def get_right_child(self) -> Self | None:
         return self._right
 
-    def set_right_child(self, node: Self | None):
+    def _set_right_child(self, node: Self | None):
         if type(self) == type(node) or node is None:
             self._right = node
         else:
             raise TypeError(
                 f"Right child must be a {type(self).__name__} or None")
+
+    def set_right_child(self, node: Self | None):
+        self._set_right_child(node)
+        if type(self) == type(node):
+            node.set_parent(self)
 
     def get_parent(self) -> Self | None:
         return self._parent
